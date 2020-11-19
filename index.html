@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var validResponses = ["rock", "paper", "scissors"];
+            var playerScore = 0;
+            var computerScore = 0;
+            var ties = 0;
+
+            for (var i = 0; i < 10; i++) {
+                
+                var userInput = prompt("Select Rock, Paper or Scissors:").toLowerCase();
+                var computerNum = Math.floor(Math.random() * 3);
+                var computerInput = validResponses[computerNum];
+
+                if (userInput === computerInput) {
+                    ties++;
+                } else if (userInput === "paper" && computerInput === "rock") {
+                    playerScore++;
+                } else if (userInput === "paper" && computerInput === "scissors") {
+                    computerScore++;
+                } else if (userInput === "rock" && computerInput === "paper") {
+                    computerScore++;
+                } else if (userInput === "rock" && computerInput === "scissors") {
+                    playerScore++;
+                } else if (userInput === "scissors" && computerInput === "rock") {
+                    computerScore++;
+                } else if (userInput === "scissors" && computerInput === "paper") {
+                    playerScore++;
+                }
+
+                alert("Current scores: Player: " + playerScore + "  Computer: " + computerScore + "  Ties: " + ties);
+            }
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+Rock Paper Scissors Pseudocode
+
+Set player score to 0
+Set computer score to 0
+
+FOR 10 ITERATIONS
+
+Player 1 Selects RPC
+Computer generates number from 0 to 2
+
+If same response
+    continue
+else if player has paper computer has rock
+    player score goes up
+else if player has paper computer has Scissors
+    comp score goes up
+else if player has rock computer has paper
+    comp score goes up
+else if player has rock computer has Scissors
+    player score goes up
+else if player has scissors computer has rock
+    player score goes up
+else if player has scissors computer has paper
+    comp score goes up
+
+Print the current scores
+
+ENDFOR
